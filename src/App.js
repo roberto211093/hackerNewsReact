@@ -30,7 +30,7 @@ function App() {
     useEffect(() => {
         const fetchData = async () => {
             const res = await getNewsApi();
-            if (res['news'].length > 0) {
+            if (res['news'] && res['news'].length > 0) {
                 setNews(res['news']);
             } else {
                 setError("No hay mas noticias disponible.");
